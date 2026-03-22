@@ -1,23 +1,42 @@
-# AI Hub for VS Code
+# AI Hub Launcher for VS Code
 
-Use all major AI services directly in VS Code sidebar - completely free with your existing accounts!
+Launch AI services and developer tools directly from VS Code sidebar!
 
 ## Features
 
-- 🚀 **Multiple AI Services**: ChatGPT, Claude, Google Gemini, Perplexity AI, and more
-- 🔐 **No API Keys Required**: Use your existing accounts just like in a browser
-- 💾 **Session Persistence**: Stay logged in across VS Code restarts
-- 🔄 **Easy Switching**: Switch between services seamlessly
-- 🆓 **Completely Free**: Uses your free accounts, no additional charges
-- 🌐 **Browser-like Experience**: Full web interface integrated into VS Code
+- 🚀 **One-Click Access**: Launch 12+ AI services and developer tools instantly
+- 🔍 **Custom URL Input**: Open any website directly from the sidebar
+- ⭐ **Custom Services**: Add your own services with custom icons
+- 📌 **Recent Tracking**: Automatically remembers last 10 opened services
+- ⚙️ **Flexible Browser**: Choose between VS Code Simple Browser or External Browser
+- 🆓 **No API Keys**: Use your existing accounts, no configuration needed
+- 🎨 **Modern UI**: Clean, professional design that matches VS Code theme
+
+## Quick Launch Services
+
+| Service | Icon | Description |
+|---------|------|-------------|
+| ChatGPT | 🤖 | OpenAI's conversational AI |
+| Claude AI | 🧠 | Anthropic's AI assistant |
+| Google Gemini | ✨ | Google's multimodal AI |
+| Perplexity AI | 🔍 | AI-powered search engine |
+| GitHub Copilot | 👨‍💻 | AI pair programmer |
+| DeepSeek | 🔷 | Advanced AI assistant |
+| GitHub | 🐙 | Code hosting platform |
+| Stack Overflow | 📚 | Developer Q&A community |
+| MDN Web Docs | 📖 | Web development documentation |
+| Hugging Face | 🤗 | AI model hub |
+| arXiv | 📄 | Research paper repository |
+| Character.AI | 💬 | AI character conversations |
 
 ## Installation
 
+### From VS Code Marketplace (Recommended)
 1. Open VS Code
-2. Go to Extensions (Ctrl+Shift+X)
-3. Search for "AI Hub"
+2. Go to Extensions view (`Ctrl+Shift+X`)
+3. Search for "AI Hub Launcher"
 4. Click Install
 
-Or install from VSIX:
+### From VSIX File
 ```bash
-code --install-extension ai-hub-0.0.1.vsix
+code --install-extension ai-sidebar-hub-1.0.0.vsix
