@@ -1,0 +1,13 @@
+{
+  "files.exclude": {
+    "out": false
+  },
+  "search.exclude": {
+    "out": true
+  },
+  "js/ts.tsc.autoDetect": "off",
+  "js/ts.preferences.quoteStyle": "single",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}

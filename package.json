@@ -1,0 +1,178 @@
+{
+  "name": "ai-sidebar-hub",
+  "displayName": "AI Hub",
+  "description": "Use AI services directly in VS Code - ChatGPT, Claude, Gemini and more!",
+  "version": "0.0.1",
+  "icon": "media/icon.png",
+  "publisher": "your-publisher-name",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/ai-sidebar-hub"
+  },
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Machine Learning",
+    "Programming Tools"
+  ],
+  "activationEvents": [
+    "onView:aiHubView",
+    "onCommand:aiHub.open",
+    "onStartupFinished"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "viewsContainers": {
+      "activitybar": [
+        {
+          "id": "aiHub",
+          "title": "AI Hub",
+          "icon": "media/icon.png"
+        }
+      ]
+    },
+    "views": {
+      "aiHub": [
+        {
+          "type": "webview",
+          "id": "aiHubView",
+          "name": "AI Services"
+        }
+      ]
+    },
+    "commands": [
+      {
+        "command": "aiHub.open",
+        "title": "Open AI Hub",
+        "category": "AI Hub",
+        "icon": "$(hubot)"
+      },
+      {
+        "command": "aiHub.refresh",
+        "title": "Refresh AI Hub",
+        "category": "AI Hub",
+        "icon": "$(refresh)"
+      },
+      {
+        "command": "aiHub.clearSessions",
+        "title": "Clear All Sessions",
+        "category": "AI Hub"
+      },
+      {
+        "command": "aiHub.openInSimpleBrowser",
+        "title": "Open AI Service in VS Code Browser",
+        "category": "AI Hub"
+      }
+    ],
+    "menus": {
+      "view/title": [
+        {
+          "command": "aiHub.refresh",
+          "group": "navigation",
+          "when": "view == aiHubView"
+        }
+      ],
+      "commandPalette": [
+        {
+          "command": "aiHub.open",
+          "when": "true"
+        },
+        {
+          "command": "aiHub.refresh",
+          "when": "true"
+        },
+        {
+          "command": "aiHub.clearSessions",
+          "when": "true"
+        },
+        {
+          "command": "aiHub.openInSimpleBrowser",
+          "when": "true"
+        }
+      ]
+    },
+    "keybindings": [
+      {
+        "command": "aiHub.open",
+        "key": "ctrl+shift+a",
+        "mac": "cmd+shift+a",
+        "when": "editorTextFocus"
+      },
+      {
+        "command": "aiHub.openInSimpleBrowser",
+        "key": "ctrl+shift+b",
+        "mac": "cmd+shift+b",
+        "when": "editorTextFocus"
+      }
+    ],
+    "configuration": {
+      "title": "AI Hub",
+      "properties": {
+        "aiHub.chatgpt.email": {
+          "type": "string",
+          "default": "",
+          "description": "Email address for ChatGPT login",
+          "scope": "application"
+        },
+        "aiHub.claude.email": {
+          "type": "string",
+          "default": "",
+          "description": "Email address for Claude AI login",
+          "scope": "application"
+        },
+        "aiHub.gemini.email": {
+          "type": "string",
+          "default": "",
+          "description": "Email address for Google Gemini login",
+          "scope": "application"
+        },
+        "aiHub.perplexity.email": {
+          "type": "string",
+          "default": "",
+          "description": "Email address for Perplexity AI login",
+          "scope": "application"
+        },
+        "aiHub.copilot.email": {
+          "type": "string",
+          "default": "",
+          "description": "Email address for GitHub Copilot login",
+          "scope": "application"
+        },
+        "aiHub.openInSimpleBrowser": {
+          "type": "boolean",
+          "default": false,
+          "description": "Automatically open AI services in VS Code Simple Browser when iframe fails",
+          "scope": "application"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "20.x",
+    "@types/vscode": "^1.85.0",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0",
+    "eslint": "^8.0.0",
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "open": "^9.1.0",
+    "tough-cookie": "^4.1.3"
+  },
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": true
+    }
+  }
+}
