@@ -3,7 +3,7 @@
 Launch AI services and developer tools directly from VS Code sidebar!
 
 ## 🎥 Demo Video
-[![Watch Demo](https://img.youtube.com/vi/4-AG5H3LUmA/0.jpg)](https://www.youtube.com/watch?v=4-AG5H3LUmA)
+[![Watch Demo](https://img.youtube.com/vi/XWSBvtLDSzI/0.jpg)](https://www.youtube.com/watch?v=XWSBvtLDSzI)
 
 ---
 
